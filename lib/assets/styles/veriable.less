@@ -1,0 +1,72 @@
+// base on 640's physical pixel
+.px2rem(@attributes,@px){
+    @{attributes}: @px / 64 * 1rem;
+}
+// for backgroud-size or background-position ...
+.px2rem(@attributes,@px1,@px2){
+    @{attributes}: @px1 / 64 * 1rem @px2 / 64 * 1rem;
+}
+// for padding or margin
+.px2rem(@attributes,@px1,@px2,@px3,@px4){
+    @{attributes}: @px1 / 64 * 1rem @px2 / 64 * 1rem @px3 / 64 * 1rem @px4 / 64 * 1rem;
+}
+
+.dpx(@attributes, @px) {
+  @{attributes}: (@px) * 1px;
+  [data-dpr = "2"] & {
+      @{attributes}: (@px*2) * 1px;
+  }
+  [data-dpr = "3"] & {
+      @{attributes}: (@px*3) * 1px;
+  }
+}
+
+.dpx(@attributes,@px1,@px2){
+    @{attributes}: (@px1) * 1px (@px2) * 1px;
+  [data-dpr = "2"] & {
+      @{attributes}: (@px1*2) * 1px (@px2*2) * 1px;
+  }
+  [data-dpr = "3"] & {
+      @{attributes}: (@px1*3) * 1px (@px2*3) * 1px;
+  }
+}
+
+.dpx(@attributes,@px1,@px2,@px3,@px4){
+    @{attributes}: (@px1) * 1px (@px2) * 1px (@px3) * 1px (@px4) * 1px;
+  [data-dpr = "2"] & {
+      @{attributes}: (@px1*2) * 1px (@px2*2) * 1px (@px3*2) * 1px (@px4*2) * 1px;
+  }
+  [data-dpr = "3"] & {
+      @{attributes}: (@px1*3) * 1px (@px2*3) * 1px (@px3*3) * 1px (@px4*3) * 1px;
+  }
+}
+
+.px2px(@attributes,@px){
+    @{attributes}: round(@px/2) * 1px;
+  [data-dpr = "2"] & {
+      @{attributes}: @px * 1px;
+  }
+  [data-dpr = "3"] & {
+      @{attributes}: round(@px*3/2) * 1px;
+  }
+}
+
+.px2px(@attributes,@px1,@px2){
+    @{attributes}: round(@px1/2) * 1px round(@px2/2) * 1px;
+  [data-dpr = "2"] & {
+      @{attributes}: @px1 * 1px @px2 * 1px;
+  }
+  [data-dpr = "3"] & {
+      @{attributes}: round(@px1*3/2) * 1px round(@px2*3/2) * 1px;
+  }
+}
+
+.px2px(@attributes,@px1,@px2,@px3,@px4){
+    @{attributes}: round(@px1/2) * 1px round(@px2/2) * 1px round(@px3/2) * 1px round(@px4/2) * 1px;
+  [data-dpr = "2"] & {
+      @{attributes}: @px1 * 1px @px2 * 1px @px3 * 1px @px4 * 1px;
+  }
+  [data-dpr = "3"] & {
+      @{attributes}: round(@px1*3/2) * 1px round(@px2*3/2) * 1px round(@px3*3/2) * 1px round(@px4*3/2) * 1px;
+  }
+}

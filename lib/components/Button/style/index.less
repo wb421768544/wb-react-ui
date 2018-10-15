@@ -1,0 +1,50 @@
+@import '../../../assets/styles/veriable.less';
+
+/*处理在 chrome 和 firefox 下的默认样式*/
+button:focus{
+    outline: none;
+    outline: 0;
+}
+button::-moz-focus-inner{
+    border: 0;
+}
+
+.mb-btn-large,.mb-btn-mid,.mb-btn-small{
+    letter-spacing: 0.1rem;
+    text-align: center;
+    width: auto;
+}
+
+.mb-btn-large{
+    .px2rem(min-width,370);
+    .px2rem(height,190);
+    .px2rem(border-radius,20);
+    font-size: 14px;
+}
+.mb-btn-mid{
+    .px2rem(min-width, 350);
+    .px2rem(height,165);
+    .px2rem(border-radius,20);
+    font-size: 12px;    
+}
+.mb-btn-small{
+    .px2rem(min-width,320);
+    .px2rem(height,140);
+    .px2rem(border-radius,20);
+    font-size: 10px;        
+}
+.mb-btn-success{
+    color: aliceblue;
+    border: 0 solid rgb(24,120,255); 
+    background-color: rgb(24,120,255);
+}
+.mb-btn-danger{
+    color: aliceblue;
+    border:0 solid rgb(155, 30, 30); 
+    background-color: rgb(155, 30, 30);
+}
+.mb-btn-disabled{
+    color: aliceblue;
+    border: 0 solid rgb(88, 88, 88);
+    background-color: rgb(88, 88, 88);
+}
