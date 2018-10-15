@@ -1,0 +1,45 @@
+.wb-tag {
+  line-height: 22px;
+  border-radius: 4px;
+  border-color: black;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  box-sizing: border-box!important;
+}
+.wb-tag-default {
+  color: #fff;
+  background-color: #8391a5;
+}
+.wb-tag-gray {
+  background-color: #e4e8f1;
+  border-color: #e4e8f1;
+  color: #48576a;
+}
+.wb-tag-primary {
+  background-color: rgba(32,160,255,.1);
+  border-color: rgba(32,160,255,.2);
+  color: #20a0ff;
+}
+.wb-tag-success {
+  background-color: rgba(18,206,102,.1);
+  border-color: rgba(18,206,102,.2);
+  color: #13ce66;
+}
+.wb-tag-warning {
+  background-color: rgba(247,186,41,.1);
+  border-color: rgba(247,186,41,.2);
+  color: #f7ba2a;
+}
+.wb-tag-danger {
+  background-color: rgba(255,73,73,.1);
+  border-color: rgba(255,73,73,.2);
+  color: #ff4949;
+}
+.wb-tag i.icon-close:hover::before {content: "\e60c"; }
+.wb-tag i.icon-close:hover {cursor: pointer;}
+.wb-tag-disapper {animation: disappear .5s;}
+@keyframes disappear {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}

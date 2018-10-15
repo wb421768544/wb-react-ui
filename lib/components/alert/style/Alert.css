@@ -1,0 +1,57 @@
+.wb-alert{
+  width: 100%;
+  color: white;
+  font-size: .8em;
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 8px 25px 8px 20px;
+}
+.wb-alert-info { background-color: #50bfff;}
+.wb-alert-error { background-color: #ff4949;}
+.wb-alert-success { background-color: #13ce66;}
+.wb-alert-warning { background-color: #f7ba2a;}
+.wb-alert .icon-close,
+.wb-btn {
+  color: white;
+  line-height: 1em;
+  cursor: pointer;
+  font-weight: bold;
+}
+.wb-alert .icon-close {
+  top: 8px;
+  right: 8px;
+  font-size: 1.5em;
+  position: absolute;
+}
+.wb-btn {
+  float: right;
+  margin-top: 3px;
+  font-style: normal;
+  margin-right: -15px;
+}
+.wb-hide { animation: hide linear .3s;}
+@keyframes hide {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.wb-icon {
+  top: 50%;
+  left: 12px;
+  color: white;
+  font-size: 1.3em;
+  overflow: visible;
+  position: absolute;
+  transform: translate(0, -50%);
+}
+
+.wb-alert-description {
+  font-weight: bold;
+}
+.wb-icon-container { padding-left: 45px;}
+.wb-alert-description > div { font-weight: normal;}
+.wb-alert-description .wb-icon {
+  font-size: 2em;
+  font-weight: bold;
+}

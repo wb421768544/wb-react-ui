@@ -1,0 +1,19 @@
+.wb-input-number {
+  min-width: 130px;
+  position: relative;
+}
+.wb-input-number .wb-button-group {
+  top: 50%;
+  right: 0%;
+  height: 94%;
+  position: absolute;
+  transform: translate(0, -50%);
+}
+.wb-input-number .wb-button {
+  height: 100%; 
+  font-weight: bold;
+  box-sizing: border-box;
+  border-top: none!important;
+  border-bottom: none!important;
+}
+.wb-input-number .wb-button:first-child { border-radius: 0; }

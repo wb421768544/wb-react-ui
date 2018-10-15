@@ -1,0 +1,66 @@
+.wb-input-default {
+  outline: none;
+  /* padding: 0 8px; */
+  line-height: 2em;
+  padding-right: 15%;
+  font-size: inherit;
+  border-radius: 4px;
+  width: 99%!important;
+  box-sizing: border-box;
+  border: 1px solid #bfcbd9;
+  transition: border-color .4s;
+  background-color: white;
+}
+.wb-input-default-label {
+  color: #bfcbd9;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%!important;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.wb-input-default-label i {
+  line-height: 1em;
+  margin-left: -20px;
+}
+.wb-input-default:focus,
+.wb-input-default:focus:hover {
+  border-color: #20a0ff;
+}
+.wb-input-default:hover {
+  border-color: #8391a5;
+}
+.wb-input-default:disabled, .wb-textarea-disabled{
+  color: #bbb;
+  border-color: #d1dbe5;
+  background-color: #eef1f6;
+  cursor: not-allowed!important;
+}
+.wb-input-default:disabled::placeholder, .wb-textarea-disabled {
+  color: #bbb;
+}
+.wb-input-default::placeholder {
+  color: #bfcbd9;
+}
+.wb-input-textarea {
+  width: 100%;
+  padding: 5px;
+  resize: vertical;
+  line-height: 1.3em;
+  text-align: initial;
+  -webkit-resize: vertical;
+  -moz-resize: vertical;
+  -ms-resize: vertical; 
+  overflow-x: auto;
+  color: black;
+  cursor: text;
+}
+.wb-input-textarea:empty::before {
+  content: attr(data-placeholder);
+  color: #d1dbe5;
+}
+.copy-textarea { display: none; }
+.wb-label-large .wb-input-default { font-size: 1.3em; }
+.wb-label-small .wb-input-default { font-size: 0.8em; }
+.wb-label-mini .wb-input-default { font-size: 0.65em; }

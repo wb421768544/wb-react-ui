@@ -1,0 +1,82 @@
+.wb-radio-default {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  outline: none;
+  appearance:none;
+  border-radius: 9px;
+  /* -moz-appearance:none; 
+  -webkit-appearance:none; */
+  border: 1px solid #bfcbd9;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.wb-radio-default:hover { border-color: #20a0ff; }
+
+.wb-radio-default:checked {
+  border: 6px solid #20a0ff;
+  animation: change-bg .25s ;
+}
+
+.wb-radio-label {
+  cursor: pointer;
+  user-select: none;
+}
+
+.wb-is-disabled {
+  color: #bbb;
+  cursor: not-allowed;
+  border-color: #d1dbe5;
+}
+.wb-radio-default:disabled:hover { border-color: #bfcbd9; }
+.wb-radio-default:disabled {
+  cursor: not-allowed;
+  background-color: #eef1f6;
+}
+
+.wb-radio-large-label {
+  font-size: 1.5em;
+}
+.wb-radio-large-label .wb-radio-default {
+  width: 25px;
+  height: 25px;
+  border-radius: 13px;
+}
+.wb-radio-small-label {
+  font-size: .7em;
+}
+.wb-radio-small-label .wb-radio-default {
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.wb-radio-small-label .wb-radio-default:checked {
+  border: 3px solid #20a0ff;
+  animation: change-bg-small .25s ;
+}
+
+@keyframes change-bg {
+  from {
+    background-color: #20a0ff;
+    border-width: 9px;
+  }
+
+  to {
+    background-color: #ffffff;
+    border-width: 6px;
+  }
+}
+
+@keyframes change-bg-small {
+  from {
+    background-color: #20a0ff;
+    border-width: 1px;
+  }
+
+  to {
+    background-color: #ffffff;
+    border-width: 3px;
+  }
+}

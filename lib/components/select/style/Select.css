@@ -1,0 +1,63 @@
+.wb-selector .wb-input-default { border: none; user-select: none;}
+.wb-selector-focus .icon-caret-bottom,
+.wb-selector-blur .icon-caret-bottom
+{ transition: transform .2s; }
+.selector-list-hidden { display: none; }
+.wb-selector-blur .icon-caret-bottom { transform: rotate(0deg); }
+.wb-selector, .wb-selector .wb-input-default { cursor: pointer; }
+.wb-selector-focus .icon-caret-bottom { transform: rotate(180deg); }
+.wb-selector-list {
+  margin: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 5px 0;
+  margin-top: 6px;
+  overflow: auto;
+  position: absolute;
+  box-sizing: border-box;
+  transition: transform .2s;
+  transform-origin: top center;
+  box-shadow: 0 0 5px #bfcbd9;
+  background-color: white;
+}
+
+.wb-selector-list li {
+  list-style: none;
+  padding: 8px 10px;
+  user-select: none;
+  transition: background-color .1s;
+}
+.wb-selector-list li:hover { background-color: #E4E8F0; }
+.wb-selector {
+  margin: 0;
+  width: 100%;
+  padding: 1px;
+  position: relative;
+  border-radius: 5px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1.5px solid #bfcbd9;
+  transition: border-color .2s;
+}
+.wb-selector:hover { border-color: #8391a5; }
+.selector-list-show { animation: select-show .4s!important; }
+.selector-checked {
+  background-color: #20a0ff;
+  color: #ffffff;
+}
+.selector-checked:hover { background-color: #1c8de0!important; }
+.selector-disabled, .selector-container-disabled { cursor: not-allowed; }
+.selector-disabled:hover { background-color: transparent!important; }
+.selector-container-disabled { background-color: #eef1f6; }
+.selector-disabled { color: #bfcbd9; }
+
+@keyframes select-show {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}

@@ -1,0 +1,224 @@
+/* ——————————————————————公共样式————————————————————————————*/
+.wb-button {
+  outline: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 6px 15px;
+  line-height: 1.5em;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  user-select: none;
+  -moz-user-focus: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+/* ————————————————————初始样式——————————————————————————————*/
+.wb-button-large {
+  padding: 10px 19px;
+  line-height: 1em;
+  font-size: 16px;
+}
+.wb-button-small {
+  line-height: .85em;
+  padding: 7px 9px;
+}
+.wb-button-mini {
+  padding: 4px;
+  line-height: 1em;
+}
+
+.wb-button-success,
+.wb-button-warning,
+.wb-button-danger,
+.wb-button-info,
+.wb-button-primary {
+  color: #ffffff;
+}
+
+.wb-button-default {
+  background-color: #ffffff!important;
+  border-color: #c4c4c4;
+}
+.wb-button-primary {
+  background-color: #20a0ff;
+  border-color: #20a0ff;
+}
+.wb-button-text {
+  padding-right: 0;
+  padding-left: 0;
+  background-color: transparent;
+  border-color: transparent;
+  color: #20a0ff;
+}
+.wb-button-success {
+  background-color: #13ce66;
+  border-color: #13ce66;
+}
+.wb-button-warning {
+  background-color: #f7ba2a;
+  border-color: #f7ba2a;
+}
+.wb-button-danger {
+  background-color: #ff4949;
+  border-color: #ff4949;
+}
+.wb-button-info {
+  background-color: #50bfff;
+  border-color: #50bfff;
+}
+.wb-button-plain{
+  background-color: #ffffff;
+  border-color: #c4c4c4!important;
+  color: black;
+}
+/* ——————————————————focus hover————————————————————————————————*/
+.wb-button-default:focus, .wb-button-default:hover {
+  border-color: #20a0ff!important;
+  color: #20a0ff;
+}
+.wb-button-primary:focus, .wb-button-primary:hover {
+  background-color: #4db3ff;
+  border-color: #4db3ff;
+}
+.wb-button-success:focus, .wb-button-success:hover {
+  background: #42d885;
+    border-color: #42d885;
+}
+.wb-button-warning:focus, .wb-button-warning:hover {
+  background: #f9c855;
+  border-color: #f9c855;
+}
+.wb-button-danger:focus, .wb-button-danger:hover {
+  background: #ff6d6d;
+  border-color: #ff6d6d;
+}
+.wb-button-info:focus, .wb-button-info:hover {
+  background: #73ccff;
+  border-color: #73ccff;
+}
+/* —————————————————————active—————————————————————————————*/
+.wb-button-text:active {
+  color: #1d90e6;
+}
+.wb-button-default:active {
+  color: #1d90e6!important;
+  border-color: #1d90e6;
+}
+.wb-button-primary:active {
+  background-color: #1d90e6;
+}
+.wb-button-success:active {
+  background: #11b95c;
+  border-color: #11b95c;
+}
+.wb-button-warning:active {
+  background: #dea726;
+  border-color: #dea726;
+}
+.wb-button-danger:active {
+  background: #e64242;
+  border-color: #e64242;
+}
+.wb-button-info:active {
+  background: #48ace6;
+  border-color: #48ace6;
+}
+/* ————————————————————plain——————————————————————————————*/
+.wb-button-plain:focus,
+.wb-button-plain:hover,
+.wb-button-plain:active {
+  background-color: #ffffff;
+}
+.wb-button-success-plain:focus,
+.wb-button-success-plain:hover {
+  border-color: #13ce66!important;
+  color: #13ce66;
+}
+.wb-button-warning-plain:focus,
+.wb-button-warning-plain:hover {
+  border-color: #f7ba2a!important;
+  color: #f7ba2a;
+}
+.wb-button-danger-plain:focus,
+.wb-button-danger-plain:hover {
+  border-color: #ff4949!important;
+  color: #ff4949;
+}
+.wb-button-info-plain:focus,
+.wb-button-info-plain:hover {
+  border-color: #50bfff!important;
+  color: #50bfff;
+}
+/* ————————————————————plain active——————————————————————————————*/
+.wb-button-success-plain:active {
+  border-color: #11b95c;
+  color: #11b95c;
+}
+.wb-button-warning-plain:active {
+  border-color: #dea726;
+  color: #dea726;
+}
+.wb-button-danger-plain:active {
+  border-color: #e64242;
+  color: #e64242;
+}
+.wb-button-info-plain:active {
+  border-color: #48ace6;
+  color: #48ace6;
+}
+/* ————————————————————disabled——————————————————————————————*/
+.is-disabled {
+  cursor: not-allowed;
+}
+.wb-button-text-is-disabled,
+.wb-button-text-is-disabled:active {
+  color: #bfcbd9;
+  border-color: transparent!important;
+}
+.wb-button-primary-is-disabled,
+.wb-button-danger-is-disabled,
+.wb-button-warning-is-disabled,
+.wb-button-info-is-disabled,
+.wb-button-success-is-disabled,
+.wb-button-default-is-disabled,
+.wb-button-primary-is-disabled:focus,
+.wb-button-primary-is-disabled:hover,
+.wb-button-danger-is-disable:focus,
+.wb-button-danger-is-disabled:hover,
+.wb-button-warning-is-disable:focus,
+.wb-button-warning-is-disabled:hover,
+.wb-button-info-is-disable:focus,
+.wb-button-info-is-disabled:hover,
+.wb-button-success-is-disable:focus,
+.wb-button-success-is-disabled:hover,
+.wb-button-default-is-disabled:focus,
+.wb-button-default-is-disabled:hover {
+  border-color: #d1dbe5!important;
+  background-color: #eef1f6!important;
+  color: #bfcbd9!important;
+}
+.wb-button-primary-plain-is-disabled,
+.wb-button-danger-plain-is-disabled,
+.wb-button-warning-plain-is-disabled,
+.wb-button-info-plain-is-disabled,
+.wb-button-success-plain-is-disabled,
+.wb-button-default-plain-is-disabled,
+.wb-button-primary-plain-is-disabled:focus,
+.wb-button-primary-plain-is-disabled:hover,
+.wb-button-danger-plain-is-disable:focus,
+.wb-button-danger-plain-is-disabled:hover,
+.wb-button-warning-plain-is-disable:focus,
+.wb-button-warning-plain-is-disabled:hover,
+.wb-button-info-plain-is-disable:focus,
+.wb-button-info-plain-is-disabled:hover,
+.wb-button-success-plain-is-disable:focus,
+.wb-button-success-plain-is-disabled:hover,
+.wb-button-default-plain-is-disabled:focus,
+.wb-button-default-plain-is-disabled:hover {
+  border-color: #d1dbe5!important;
+  background-color: #ffffff!important;
+  color: #bfcbd9!important;
+}

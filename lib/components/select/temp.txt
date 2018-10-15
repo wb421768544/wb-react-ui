@@ -1,0 +1,64 @@
+import React, { Component } from 'react';
+import './App.css';
+import Select from './components/select';
+
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      options: [
+        {
+          value: '选项一',
+          label: '黄金',
+          disabled: true
+        },
+        {
+          value: '选项二',
+          label: '白银'
+        },
+        {
+          value: '选项三',
+          label: '青铜'
+        },
+        {
+          value: '选项四',
+          label: '呵呵'
+        },
+        {
+          value: '选项5',
+          label: 'wb'
+        },
+        {
+          value: '选项6',
+          label: 'ww'
+        },
+        {
+          value: '选项7',
+          label: 'bb'
+        },
+        {
+          value: '选项8',
+          label: 'ss'
+        }
+      ],
+      value: ''
+    }
+  }
+
+  render() {
+    return (
+      <div className="app">
+        <Select 
+        maxHeight="200px"
+        size = "large"
+        options = {this.state.options}
+        disabled = {false} 
+        clearable = {true} 
+        multiple = {true}>
+        </Select>
+      </div>
+    );
+  }
+}
+
+export default App;

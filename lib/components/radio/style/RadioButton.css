@@ -1,0 +1,43 @@
+.wb-radio-button {
+  line-height: 0;
+  border-radius: 4px;
+  padding: 15px 30px;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-flex;
+  justify-content: center;
+  background-color: #fff;
+  animation: none!important;
+  border: 1px solid #bfcbd9;
+  transition: color .2s ,background-color .2s;
+}
+
+.wb-radio-button:checked {
+  color: #fff;
+  border-width: 1px;
+  border-color: #20a0ff!important;
+  background-color: #20a0ff;
+}
+.wb-radio-button:checked:hover {
+  color: #fff;
+}
+.wb-radio-button:disabled, .wb-radio-button:disabled:hover {
+  color: #bfcbd9;
+}
+
+.wb-radio-button::before {
+  content: attr(data-inner);
+}
+.wb-radio-button:hover {
+  color: #20a0ff;
+  border-color: #bfcbd9;
+}
+
+.wb-radio-large-label .wb-radio-button {
+  font-size: .8em;
+  padding: 20px 35px;
+}
+.wb-radio-small-label .wb-radio-button {
+  font-size: 1em;
+  padding: 10px 22px;
+}

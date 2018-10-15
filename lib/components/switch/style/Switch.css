@@ -1,0 +1,46 @@
+.wb-switch {
+  width: 50px;
+  height: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+  border-radius: 25px;
+  display: inline-block;
+  transition: background-color .2s;
+}
+.wb-switch-button {
+  width: 15px;
+  background: white;
+  border-radius: 25px;
+  vertical-align: middle;
+  transition: left .2s, right .2s;
+}
+.wb-switch-button,
+.wb-switch .on,
+.wb-switch .off {
+  top: 50%;
+  margin: 0;
+  height: 15px;
+  line-height: 1;
+  position: absolute;
+  display: inline-block;
+  transform: translate(0, -50%);
+}
+.wb-switch .on { left: 5px; }
+.wb-switch .off { right: 5px; }
+.wb-switch-value { display: none; }
+.wb-switch-on { background-color: #20a0ff; }
+.wb-switch-off { background-color: #bfcbd9; }
+.wb-switch .on, .wb-switch .off { animation: appear .5s; }
+@keyframes appear {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+.wb-switch-disabled {
+  cursor: not-allowed;
+  background-color: hsl(220, 27%, 89%)!important;
+}

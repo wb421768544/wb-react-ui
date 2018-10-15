@@ -1,0 +1,130 @@
+.wb-tooltip {
+  display: inline-block;
+  padding: 0!important;
+  position: relative;
+}
+.wb-tooltip > div {
+  color: white;
+  z-index: 999;
+  display: none;
+  font-size: .6em;
+  min-width: 25px;
+  line-height: 1.2;
+  border-radius: 3px;
+  position: absolute;
+  white-space: nowrap;
+  margin: 0!important;
+  word-break: break-all;
+  padding: 7px!important;
+  animation: show linear .3s;
+  background-color: #1f2d3d;
+}
+.wb-tooltip .wb-tip {
+  width: 0;
+  height: 0;
+  content: "";
+  position: absolute;
+  border: 8px solid transparent;
+}
+.wb-tooltip-top-start .wb-tip,
+.wb-tooltip-top .wb-tip,
+.wb-tooltip-top-end .wb-tip {
+  top: 90%;
+  border-top-color: #1f2d3d;
+  transform: translate(-50%, -0%);
+}
+.wb-tooltip-bottom-start .wb-tip,
+.wb-tooltip-bottom .wb-tip,
+.wb-tooltip-bottom-end .wb-tip {
+  top: 10%;
+  border-bottom-color: #1f2d3d;
+  transform: translate(-50%, -100%);
+}
+.wb-tooltip-top-start,
+.wb-tooltip-top,
+.wb-tooltip-top-end {
+  top: -20%;
+}
+.wb-tooltip-bottom-start,
+.wb-tooltip-bottom,
+.wb-tooltip-bottom-end {
+  top: 120%;
+}
+.wb-tooltip-top-start,
+.wb-tooltip-top-end {
+  transform: translate(0, -100%);
+}
+.wb-tooltip-top,
+.wb-tooltip-bottom,
+.wb-tooltip-bottom .wb-tip,
+.wb-tooltip-top .wb-tip {
+  left: 50%;
+}
+.wb-tooltip-top-end,
+.wb-tooltip-bottom-end {
+  right: 0;
+  left: initial;
+}
+.wb-tooltip-bottom { transform: translate(-50%, 0); }
+.wb-tooltip-top { transform: translate(-50%, -100%); }
+.wb-tooltip-top-end .wb-tip { transform: translate(50%, 0); }
+.wb-tooltip-bottom-end .wb-tip { transform: translate(50%, -100%); }
+.wb-tooltip-left-start .wb-tip,
+.wb-tooltip-left .wb-tip,
+.wb-tooltip-left-end .wb-tip {
+  left: 100%;
+  border-left-color: #1f2d3d;
+}
+.wb-tooltip-right-start .wb-tip,
+.wb-tooltip-right .wb-tip,
+.wb-tooltip-right-end .wb-tip {
+  right: 100%;
+  border-right-color: #1f2d3d;
+}
+.wb-tooltip-left,
+.wb-tooltip-right,
+.wb-tooltip-left .wb-tip,
+.wb-tooltip-right .wb-tip { 
+  top: 50%;
+}
+.wb-tooltip-left-end .wb-tip,
+.wb-tooltip-right-end .wb-tip {
+  transform: translate(0, 50%);
+}
+.wb-tooltip-left-start,
+.wb-tooltip-left,
+.wb-tooltip-left-end {
+  right: 120%;
+  border-left-color: #1f2d3d;
+}
+.wb-tooltip-right-start,
+.wb-tooltip-right,
+.wb-tooltip-right-end {
+  left: 120%;
+  border-left-color: #1f2d3d;
+}
+.wb-tooltip-left-start .wb-tip,
+.wb-tooltip-right-start .wb-tip,
+.wb-tooltip-left .wb-tip,
+.wb-tooltip-right .wb-tip,
+.wb-tooltip-left,
+.wb-tooltip-right {
+  transform: translate(0, -50%);
+}
+.wb-tooltip-left-start,
+.wb-tooltip-right-start {
+  top: 0;
+}
+.wb-tooltip-left-end,
+.wb-tooltip-right-end {
+  bottom: 0;
+}
+
+@keyframes show {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes hide {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

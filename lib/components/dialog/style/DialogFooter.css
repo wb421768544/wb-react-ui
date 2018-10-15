@@ -1,0 +1,6 @@
+.wb-dialog-footer {
+  text-align: right;
+  box-sizing: border-box;
+  padding: 10px 20px 15px;
+}
+.wb-dialog-footer .wb-button-normal { margin-left: 20px; }
