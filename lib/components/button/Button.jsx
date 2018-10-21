@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
-import './css/Button.css';
+import './style/Button.css';
 
 class Button extends Component {
   static defaultProps = {
