@@ -58,8 +58,8 @@ class InputNumber extends Component {
         size = {this.props.size}
         name = {this.props.name}
         value = {this.state.value}
-        onChange = {this.handleChange}
         disabled = {this.props.disabled}
+        nativeProps = {{onChange: this.handleChange}}
       />
       <Button.Group>
         <Button size = {this.props.size} disabled = {this.props.disabled} icon = "icon-plus" onClick = {this.increment} />

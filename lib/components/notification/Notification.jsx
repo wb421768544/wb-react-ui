@@ -41,11 +41,14 @@ class Notification extends Component {
   }
 
   handleMouseLeave = () => {
-    // 本来不应该去主动调用周期函数，但是用一下下应该没事吧😶
-    this.componentDidMount();
+    this.autoClose();
   }
 
   componentDidMount() {
+    this.autoClose();
+  }
+
+  autoClose() {
     if(this.props.duration) {
       this.clear = setTimeout(() => {
         this.handleClick();

@@ -7,6 +7,7 @@ class Slider extends Component {
     min: propTypes.number,
     max: propTypes.number,
     step: propTypes.number,
+    name: propTypes.string,
     value: propTypes.number,
     width: propTypes.number,
     disabled: propTypes.bool,
@@ -45,7 +46,7 @@ class Slider extends Component {
      * stepPX   1个step对应的像素
      * prevLen  之前sliderBtnRef所在位置，也就是sliderRef的width
      */
-    this.range = this.props.max - this.props.min;
+    this.range = this.props.max - this.props.min ;
     this.stepPX = this.props.step / this.range * this.props.width;
     this.prevLen = Math.round(this.props.value / this.props.step) * this.stepPX;
   }
@@ -67,7 +68,6 @@ class Slider extends Component {
   handleMouseMoveOnHTML = e => {
     const slider = this.sliderRef.current;
     let step = Math.round((e.pageX - this.blockRef.current.offsetLeft - slider.offsetWidth) / this.stepPX);
-    
     if(Math.abs(step) >= 1) {
       let temp =  this.prevLen + step * this.stepPX;
       if(temp >= 0 && temp <= this.props.width) {
@@ -79,9 +79,7 @@ class Slider extends Component {
       const valueRef = this.iptValueRef.current;
       valueRef.dataValue = valueRef.value = this.prevLen / this.props.width * this.range;
       this.props.onChange && this.props.onChange(valueRef.value);
-      this.setState({
-        tip:  valueRef.value
-      });
+      this.setState({ tip:  valueRef.value });
     }
   }
 
@@ -92,12 +90,11 @@ class Slider extends Component {
     if(Math.abs(step) >= 1) {
       this.prevLen += step * this.stepPX;
       slider.style.width = this.prevLen + 'px';
+      // input会自动四舍五入，小数问题在这里就不管了
       const valueRef = this.iptValueRef.current;
       valueRef.value = this.prevLen / this.props.width * this.range;
       this.props.onChange && this.props.onChange(valueRef.value);
-      this.setState({
-        tip:  valueRef.value
-      });
+      this.setState({ tip:  valueRef.value });
     }
   }
 
@@ -136,8 +133,6 @@ class Slider extends Component {
       </div>
       <input
         type = "range"
-        min = {this.props.min}
-        max = {this.props.max}
         step = {this.props.step}
         name = {this.props.name}
         ref = {this.iptValueRef}

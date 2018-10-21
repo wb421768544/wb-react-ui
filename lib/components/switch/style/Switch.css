@@ -10,6 +10,7 @@
   position: relative;
   border-radius: 25px;
   display: inline-block;
+  border: 1px solid transparent;
   transition: background-color .2s;
 }
 .wb-switch-button {
@@ -43,4 +44,7 @@
 .wb-switch-disabled {
   cursor: not-allowed;
   background-color: hsl(220, 27%, 89%)!important;
+}
+.wb-switch-allowFocus:focus {
+  border: 1px solid #20a0ff;
 }

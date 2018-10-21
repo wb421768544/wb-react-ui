@@ -4,10 +4,13 @@ import './style/Switch.css';
 
 class Switch extends Component {
   static defaultProps = {
-    allowFocus: true
+    allowFocus: true,
+    value: false,
+    disabled: false,
   }
 
   static propTypes = {
+    value: propTypes.bool,
     name: propTypes.string,
     onBlur: propTypes.func,
     onFocus: propTypes.func,
@@ -26,7 +29,7 @@ class Switch extends Component {
   constructor(props) {
     super(props);
     this.ref = React.createRef();
-    this.state = {status: this.props.value};
+    this.state = {status: !this.props.value};
   }
   /**
    * 因为是button来充当switch的载体，所以避免button在form中的默认行为
@@ -35,13 +38,16 @@ class Switch extends Component {
     e && e.preventDefault();
     let status = this.props.disabled? this.state.status: !this.state.status;
     this.setState(
-      {
-        status: status
-      },
+      {status},
       () => {
         this.ref.current.children[0].style = `left:${this.state.status ? this.left: 2}px`;
         if(typeof this.props.onChange === 'function') {
-          let arg = this.state.status ? this.props.onValue : this.props.offValue;
+          let arg;
+          if(this.props.onValue && this.props.offValue) {
+            arg = this.state.status ? this.props.onValue : this.props.offValue;
+          } else {
+            arg = this.state.status;
+          }
           this.props.onChange(arg);
         }
       }
@@ -77,6 +83,7 @@ class Switch extends Component {
           wb-switch
           ${this.props.disabled ? 'wb-switch-disabled' : ''}
           ${this.state.status ? 'wb-switch-on' : 'wb-switch-off'}
+          ${this.props.allowFocus ? 'wb-switch-allowFocus' : ''}
         `}
         style = {{
           width: this.props.width,
