@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production --config webpack.config.js --watch",
+    "build": "webpack --config webpack.config.js --watch",
     "dev": "webpack-dev-server --hot --inline",
     "lint": "eslint lib/**; exit 0",
     "lint:watch": "esw -w lib/**"

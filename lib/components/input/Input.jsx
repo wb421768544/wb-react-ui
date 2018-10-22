@@ -6,6 +6,7 @@ class Input extends Component {
   static propTypes = {
     icon: PropTypes.string,
     style: PropTypes.object,
+    disabled: PropTypes.bool,
     onChange: PropTypes.func,
     getIconRef: PropTypes.func,
     autosize: PropTypes.object,
@@ -20,7 +21,9 @@ class Input extends Component {
     style: {},
     type: 'text',
     size: 'normal',
+    disabled: false,
     nativeProps: {},
+    placeholder: '请输入内容',
     autosize: {minRows: 3, maxRows: 20},
   }
 
@@ -53,6 +56,8 @@ class Input extends Component {
       case 'textarea': Comp = <React.Fragment>
         <div
           onChange = {this.handleWarning}
+          placeholder = {this.props.placeholder}
+          disabled = {this.props.disabled}
           {...this.props.nativeProps}
           value = {this.props.value}
           rows = {this.state.minRows}
@@ -81,6 +86,8 @@ class Input extends Component {
       default : Comp = <React.Fragment>
         <input
           onChange = {this.handleWarning}
+          placeholder = {this.props.placeholder}
+          disabled = {this.props.disabled}
           {...this.props.nativeProps}
           value = {this.props.value}
           className = {`
