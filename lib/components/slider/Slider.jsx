@@ -133,6 +133,7 @@ class Slider extends Component {
       </div>
       <input
         type = "range"
+        max = {this.props.max}
         step = {this.props.step}
         name = {this.props.name}
         ref = {this.iptValueRef}
