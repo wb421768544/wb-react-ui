@@ -1,4 +1,4 @@
-.wb-notication-block {
+.wb-notification-block {
   margin: 10px;
   width: 330px;
   padding: 20px;
@@ -8,27 +8,27 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 0 6px rgba(0,0,0,.04);
 }
-.wb-notication-block .wb-icon {
+.wb-notification-block .wb-icon {
   margin-left: 15px;
   font-size: 3em;
   font-weight: 100;
 }
-.wb-info-notication,
-.wb-error-notication,
-.wb-success-notication,
-.wb-warning-notication {
+.wb-info-notification,
+.wb-error-notification,
+.wb-success-notification,
+.wb-warning-notification {
   padding-left: 75px;
 }
-.wb-info-notication .wb-icon{ color: #50bfff;}
-.wb-error-notication .wb-icon{ color: #ff4949;}
-.wb-success-notication .wb-icon{ color: #13ce66!important;}
-.wb-warning-notication .wb-icon{ color: #f7ba2a;}
+.wb-info-notification .wb-icon{ color: #50bfff;}
+.wb-error-notification .wb-icon{ color: #ff4949;}
+.wb-success-notification .wb-icon{ color: #13ce66!important;}
+.wb-warning-notification .wb-icon{ color: #f7ba2a;}
 
-.wb-notication-block p,
-.wb-notication-block .icon-close {
+.wb-notification-block p,
+.wb-notification-block .icon-close {
   color: #8391a5;
 }
-.wb-notication-block h2 {
+.wb-notification-block h2 {
   margin: 0;
   font-size: 18px;
   color: #1f2d3d;
@@ -36,7 +36,7 @@
   padding-right: 12px;
   word-break: break-all;
 }
-.wb-notication-block .icon-close {
+.wb-notification-block .icon-close {
   top: 20px;
   right: 20px;
   cursor: pointer;
@@ -45,8 +45,8 @@
 }
 /* 其他文件中存在此动画hide */
 .wb-notification-hide { animation: test-hide .2s; transform: translate(0, 0);}
-.wb-notication-show { animation: wb-notication-show 2s;}
-@keyframes wb-notication-show {
+.wb-notification-show { animation: wb-notification-show 2s;}
+@keyframes wb-notification-show {
   from { transform: translate(-100%, 0);}
   to { transform: translate(0, 0);}
 }

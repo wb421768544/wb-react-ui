@@ -57,14 +57,16 @@ class Notification extends Component {
   }
 
   render() {
-    let iconClass = this.props.type? 'wb-' + this.props.type + '-notication': '';
+    
+    let iconClass = this.props.type? 'wb-' + this.props.type + '-notification': '';
+    
     const ICON = this.props.type? <i className = {
       Notification.classList[(Notification.typeList.indexOf(this.props.type))] + ' wb-icon'
     } /> : null;
 
     return <div
       className = {`
-        wb-notication-block
+        wb-notification-block
         ${iconClass}
       `}
       onClick = {this.props.onClick}
