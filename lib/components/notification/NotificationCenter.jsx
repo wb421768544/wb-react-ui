@@ -26,6 +26,7 @@ export default function NotificationCenter(options = {}) {
   // 添加动画
   newNotificate.classList.add('wb-notification-container');
   document.getElementById('root').appendChild(newNotificate);
+  // 这里必须手动再次获取DOM  否则ReactDOM会报错
   const container = document.getElementById(id);
   render(
     <Notification
