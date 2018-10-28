@@ -26,13 +26,13 @@ export default function NotificationCenter(options = {}) {
   // 添加动画
   newNotificate.classList.add('wb-notification-container');
   document.getElementById('root').appendChild(newNotificate);
-
+  const container = document.getElementById(id);
   render(
     <Notification
       {...options}
-      onClose = {() => updateView(newNotificate, options.onClose)}
+      onClose = {() => updateView(container, options.onClose)}
     />,
-    document.getElementById(id)
+    container
   );
 };
 

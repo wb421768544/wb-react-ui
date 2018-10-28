@@ -1,7 +1,7 @@
 {
-  "name": "wb-component-lib-test",
-  "version": "0.1.0",
-  "description": "测试一下下",
+  "name": "wb-react-ui",
+  "version": "0.0.8",
+  "description": "A component library for react.",
   "main": "build/index.js",
   "files": [
     "build"
@@ -11,8 +11,7 @@
     "build": "webpack --config webpack.config.js --watch",
     "dev": "webpack-dev-server --hot --inline",
     "lint": "eslint lib/**; exit 0",
-    "lint:watch": "esw -w lib/**",
-    "prepublish": "npm run build"
+    "lint:watch": "esw -w lib/**"
   },
   "repository": {
     "type": "git",
