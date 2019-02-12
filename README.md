@@ -26,7 +26,7 @@ npm install wb-react-ui --save
 ```        
 
 # 展示页
-本项目的展示页地址：[http://wangbing520.club/wb-ui]()
+本项目的展示页地址：[http://wangbing520.club/wb-ui](http://wangbing520.club/wb-ui)
 预览效果：
 
 ![](https://user-gold-cdn.xitu.io/2019/2/4/168b74adf4368737?w=2124&h=1470&f=png&s=250211)
