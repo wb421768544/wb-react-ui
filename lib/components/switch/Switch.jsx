@@ -76,43 +76,59 @@ class Switch extends Component {
   }
 
   render() {
+    const {
+      disabled,
+      allowFocus,
+      onBlur,
+      onFocus,
+      onColor,
+      offColor,
+      onText,
+      offText,
+      name,
+      onValue,
+      offValue
+    } = this.props;
+    const { status } = this.state;
+
+
     return <React.Fragment>
       <button
         ref = {this.ref}
         className = {`
           wb-switch
-          ${this.props.disabled ? 'wb-switch-disabled' : ''}
-          ${this.state.status ? 'wb-switch-on' : 'wb-switch-off'}
-          ${this.props.allowFocus ? 'wb-switch-allowFocus' : ''}
+          ${disabled ? 'wb-switch-disabled' : ''}
+          ${status ? 'wb-switch-on' : 'wb-switch-off'}
+          ${allowFocus ? 'wb-switch-allowFocus' : ''}
         `}
         style = {{
-          width: this.props.width,
-          backgroundColor: this.state.status? this.props.onColor: this.props.offColor
+          width: width,
+          backgroundColor: status? onColor: offColor
         }}
-        onBlur = {this.props.allowFocus && this.props.onBlur}
-        onFocus = {this.props.allowFocus && this.props.onFocus}
-        onClick = {this.props.disabled ? null : this.handleClick}
+        onBlur = {allowFocus && onBlur}
+        onFocus = {allowFocus && onFocus}
+        onClick = {disabled ? null : this.handleClick}
       >
         <span className = "wb-switch-button" />
         <span
           className = "on"
-          style = {{display: this.state.status ? '': 'none'}}
+          style = {{display: status ? '': 'none'}}
         >
-        {this.props.onText}
+        {onText}
         </span>
         <span
           className = "off"
-          style = {{display: this.state.status ? 'none': ''}}
+          style = {{display: status ? 'none': ''}}
         >
-        {this.props.offText}
+        {offText}
         </span>
       </button>
       <input
-        name = {this.props.name}
+        name = {name}
         className = "wb-switch-value"
         onChange = {this.handleChange}
-        disabled = {this.props.disabled}
-        value = {this.state.status ? this.props.onValue : this.props.offValue}
+        disabled = {disabled}
+        value = {status ? onValue : offValue}
       />
     </React.Fragment>;
   }

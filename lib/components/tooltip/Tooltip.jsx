@@ -81,6 +81,7 @@ class Tooltip extends Component {
   }
 
   render() {
+    const { children, content, placement } = this.props;
     return <div
       className = "wb-tooltip"
       ref = {this.containerRef}
@@ -88,13 +89,13 @@ class Tooltip extends Component {
       onMouseEnter = {this.handleMouseEnter}
       onMouseLeave = {this.handleMouseLeave}
     >
-      {this.props.children}
+      {children}
       <div
         ref = {this.contentRef}
         onAnimationEnd = {this.handleAnimationEnd}
-        className = {`wb-tooltip-${this.props.placement}`}
+        className = {`wb-tooltip-${placement}`}
       >
-        {typeof this.props.content === 'string' ? this.props.content.trim() : this.props.content}
+        {typeof content === 'string' ? content.trim() : content}
         <span ref = {this.tipRef} className = "wb-tip" />
       </div>
     </div>;

@@ -32,22 +32,20 @@ class Tag extends Component {
   }
 
   render() {
-    return !this.state.remove ?
-    <span ref = {this.tagRef}
-    onAnimationEnd = {this.removeThisTag}
-    className = {'wb-tag wb-tag-' + this.props.type}
-    style = {{
-      backgroundColor: this.props.color
-    }}>
-      {this.props.children}
-      {
-        this.props.closable ?
-        <i onClick = {this.props.closeTransition ?
-        this.removeThisTag : this.handleClick} className = 'icon-close' /> :
-        null
-      }
-    </span> :
-    null;
+    const { remove } = this.state;
+    const { closable, children, closeTransition, color, type } = this.props;
+    return (!remove && <span
+      ref = {this.tagRef}
+      onAnimationEnd = {this.removeThisTag}
+      className = {'wb-tag wb-tag-' + type}
+      style = {{backgroundColor: color}}
+    >
+      {children}
+      {closable && <i
+        className = 'icon-close' 
+        onClick = {closeTransition ? this.removeThisTag : this.handleClick}
+      />}
+    </span>);
   }
 }
 

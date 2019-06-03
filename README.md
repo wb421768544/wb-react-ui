@@ -16,13 +16,13 @@ npm install wb-react-ui --save
 ##使用
 
 ```jsx
-          import React from 'react';
-          import ReactDOM from 'react-dom';
-          import { Button } from 'wb-react-ui';
-      
-          import 'wb-react-ui/build/css/index.css';
-      
-          ReactDOM.render(<Button type="primary">Hello</Button>, document.getElementById('app'));
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Button } from 'wb-react-ui';
+
+import 'wb-react-ui/build/css/index.css';
+
+ReactDOM.render(<Button type="primary">Hello</Button>, document.getElementById('app'));
 ```        
 
 # 展示页
